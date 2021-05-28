@@ -7,7 +7,7 @@
     <artifactId>TestDemo</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <name>TestDemo</name>
+    <name>Earth</name>
     <url>http://maven.apache.org</url>
     <description>测试使用</description>
     <properties>
