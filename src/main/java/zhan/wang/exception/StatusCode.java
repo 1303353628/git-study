@@ -16,7 +16,8 @@ public enum StatusCode {
 
     DB_ERR("0100", "数据库返回异常"),
 
-    FAIL("0500","失败");
+    FAIL("0500","失败"),
+    ENCODE_ERR("1000", "编码错误");
 
 
     private String code;
