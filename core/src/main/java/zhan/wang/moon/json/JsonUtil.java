@@ -1,9 +1,9 @@
-package zhan.wang.json;
+package zhan.wang.moon.json;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import zhan.wang.log.MachSeqLogger;
+import zhan.wang.moon.log.MachSeqLogger;
 
 /**
  * 

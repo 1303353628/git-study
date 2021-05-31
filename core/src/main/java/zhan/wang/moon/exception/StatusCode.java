@@ -1,4 +1,4 @@
-package zhan.wang.exception;
+package zhan.wang.moon.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

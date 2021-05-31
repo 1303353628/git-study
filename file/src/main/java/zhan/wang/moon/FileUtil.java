@@ -1,9 +1,7 @@
-package zhan.wang.util;
+package zhan.wang.moon;
 
 
-
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import zhan.wang.log.MachSeqLogger;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,7 +16,6 @@ import java.util.List;
 public class FileUtil {
 
     private MessageDigest mMessageDigest = null;
-    private static Logger logger = LoggerFactory.getLogger(FileUtil.class);
 
     /**
      * @param sourcePath
@@ -68,7 +65,7 @@ public class FileUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        logger.info("文件名：{}，MD5：{}，大小为：{}M", file.getAbsolutePath(), MD5Str, file.length() / 1024 / 1024);
+        MachSeqLogger.info("文件名：{}，MD5：{}，大小为：{}M", file.getAbsolutePath(), MD5Str, file.length() / 1024 / 1024);
 //        System.out.println("文件名：" + file.getAbsolutePath() + "\tMD5" + MD5Str + "\t大小为" + file.length()/1024/1024 + "M");
         return MD5Str;
     }
@@ -97,7 +94,7 @@ public class FileUtil {
         //跳过不同的文件格式
         if (!oldFilePath.getName().substring(oldFilePath.getName().lastIndexOf(".") + 1).equals(oldFilePath.getName().substring(oldFilePath.getName().lastIndexOf(".") + 1))) {
 //            System.out.println("文件格式不同，跳过\t" + oldFilePath.getAbsolutePath() + "\t" + oldFilePath.getAbsolutePath());
-            logger.info("文件格式不同，跳过\t 旧文件为：{}，新文件为：{}", oldFilePath.getAbsolutePath(), newFilePath.getAbsolutePath());
+            MachSeqLogger.info("文件格式不同，跳过\t 旧文件为：{}，新文件为：{}", oldFilePath.getAbsolutePath(), newFilePath.getAbsolutePath());
             return false;
         }
 

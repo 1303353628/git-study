@@ -1,4 +1,4 @@
-package zhan.wang.constant;
+package zhan.wang.moon.constant;
 
 /**
  *

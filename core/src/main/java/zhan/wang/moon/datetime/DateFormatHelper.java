@@ -1,7 +1,7 @@
-package zhan.wang.datetime;
+package zhan.wang.moon.datetime;
 
-import zhan.wang.constant.DateFormat;
-import zhan.wang.log.MachSeqLogger;
+import zhan.wang.moon.constant.DateFormat;
+import zhan.wang.moon.log.MachSeqLogger;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;

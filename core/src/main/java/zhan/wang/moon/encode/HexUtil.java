@@ -1,4 +1,4 @@
-package zhan.wang.encode;
+package zhan.wang.moon.encode;
 
 /**
  *

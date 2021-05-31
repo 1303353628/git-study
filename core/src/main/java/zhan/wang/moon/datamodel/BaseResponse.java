@@ -1,4 +1,4 @@
-package zhan.wang.datamodel;
+package zhan.wang.moon.datamodel;
 
 import lombok.Getter;
 

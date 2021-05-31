@@ -1,7 +1,7 @@
-package zhan.wang.encode;
+package zhan.wang.moon.encode;
 
-import zhan.wang.exception.EarthBaseException;
-import zhan.wang.exception.StatusCode;
+import zhan.wang.moon.exception.EarthBaseException;
+import zhan.wang.moon.exception.StatusCode;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

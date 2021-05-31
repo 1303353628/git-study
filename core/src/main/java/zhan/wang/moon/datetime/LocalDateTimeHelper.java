@@ -1,8 +1,8 @@
-package zhan.wang.datetime;
+package zhan.wang.moon.datetime;
 
 
-import zhan.wang.constant.DateFormat;
-import zhan.wang.exception.EarthBaseException;
+import zhan.wang.moon.constant.DateFormat;
+import zhan.wang.moon.exception.EarthBaseException;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -37,7 +37,7 @@ public class LocalDateTimeHelper {
      *
      * @param datetime {@link LocalDateTime}
      * @param pattern  时间格式模板
-     * @see zhan.wang.constant.DateFormat
+     * @see DateFormat
      * 
      * @return 格式化后时间字符串
      */
@@ -104,7 +104,7 @@ public class LocalDateTimeHelper {
      * 
      * @param datetimeStr   时间字符串
      * @param pattern  时间格式模板
-     * @see zhan.wang.constant.DateFormat
+     * @see DateFormat
      * @return {@link LocalDateTime}
      */
     public static LocalDateTime parseDateTime(String datetimeStr, String pattern) {

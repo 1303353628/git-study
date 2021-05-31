@@ -1,8 +1,8 @@
-package zhan.wang.datetime;
+package zhan.wang.moon.datetime;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import zhan.wang.constant.DateFormat;
+import zhan.wang.moon.constant.DateFormat;
 
 import java.text.ParseException;
 import java.util.*;
@@ -13,7 +13,7 @@ import java.util.*;
  */
 public class DateHelper {
     
-    private zhan.wang.datetime.DateFormatHelper dfHelper = zhan.wang.datetime.DateFormatHelper.getInstance();
+    private DateFormatHelper dfHelper = DateFormatHelper.getInstance();
 
     private DateHelper() {
         // private constructor
@@ -32,7 +32,7 @@ public class DateHelper {
      * 
      * @param dateStr   时间字符串
      * @param pattern   时间格式模板
-     * @see zhan.wang.constant.DateFormat
+     * @see DateFormat
      * @return  {@link Date}
      * @throws ParseException   格式转换异常
      */

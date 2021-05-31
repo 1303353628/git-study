@@ -1,4 +1,4 @@
-package zhan.wang.exception;
+package zhan.wang.moon.exception;
 
 import lombok.Getter;
 
@@ -41,7 +41,7 @@ public class EarthBaseException extends RuntimeException{
     /**
      * 构造函数
      * @param statusCode Muse 状态枚举
-     * {@link zhan.wang.exception.StatusCode}
+     * {@link StatusCode}
      */
     public EarthBaseException(StatusCode statusCode) {
         this(statusCode, null);
