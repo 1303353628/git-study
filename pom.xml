@@ -3,19 +3,30 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.dawang</groupId>
-    <artifactId>TestDemo</artifactId>
+    <groupId>zhan.wang</groupId>
+    <artifactId>moon</artifactId>
     <version>1.0</version>
-    <packaging>jar</packaging>
-    <name>Earth</name>
+    <packaging>pom</packaging>
+    <name>moon</name>
     <url>http://maven.apache.org</url>
     <description>公共工具类</description>
 
+    <modules>
+        <!-- 核心模块 -->
+        <module>core</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.clean.version>3.1.0</maven.clean.version>
+        <maven.compiler.version>3.8.1</maven.compiler.version>
+        <maven.resources.version>3.1.0</maven.resources.version>
+        <maven.surefire.version>3.0.0-M4</maven.surefire.version>
+        <maven.install.version>3.0.0-M1</maven.install.version>
+        <maven.deploy.version>3.0.0-M1</maven.deploy.version>
+
         <!-- lombok -->
         <lombok.verion>1.18.8</lombok.verion>
 
@@ -94,6 +105,47 @@
 
 
     </dependencies>
+
+    <!-- build -->
+    <build>
+        <!-- all plugin -->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.version}</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <encoding>UTF-8</encoding>
+                        <compilerArguments>
+                            <extdirs>${project.basedir}/src/main/webapp/WEB-INF/lib</extdirs>
+                        </compilerArguments>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${maven.clean.version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven.resources.version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven.install.version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven.deploy.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
     <profiles>
         <profile>
