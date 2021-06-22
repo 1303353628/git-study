@@ -1,7 +1,7 @@
 package zhan.wang.moon;
 
 
-import zhan.wang.log.MachSeqLogger;
+import zhan.wang.moon.log.MachSeqLogger;
 
 import java.io.File;
 import java.io.FileInputStream;
