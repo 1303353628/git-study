@@ -15,11 +15,11 @@ import java.util.Map;
  * 参考 http://www.slf4j.org/apidocs/org/slf4j/Logger.html
  */
 @Log4j2
-public class MachSeqLogger {
+public class MoonSeqLogger {
     
-    private static final String CLASS_NAME = MachSeqLogger.class.getName();
+    private static final String CLASS_NAME = MoonSeqLogger.class.getName();
 
-    private MachSeqLogger() {
+    private MoonSeqLogger() {
         // private constructor
     }
     

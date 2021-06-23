@@ -3,7 +3,7 @@ package zhan.wang.moon.json;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import zhan.wang.moon.log.MachSeqLogger;
+import zhan.wang.moon.log.MoonSeqLogger;
 
 /**
  * 
@@ -64,7 +64,7 @@ public class JsonUtil {
             JSONObject jsonObject = JSON.parseObject(json);
             return jsonObject.getString(key);
         } catch (Exception e) {
-            MachSeqLogger.error("Parse JSON {} with exception: ", json, e);
+            MoonSeqLogger.error("Parse JSON {} with exception: ", json, e);
             return null;
         }
     }

@@ -1,7 +1,7 @@
 package zhan.wang.moon;
 
 
-import zhan.wang.moon.log.MachSeqLogger;
+import zhan.wang.moon.log.MoonSeqLogger;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -65,7 +65,7 @@ public class FileUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        MachSeqLogger.info("文件名：{}，MD5：{}，大小为：{}M", file.getAbsolutePath(), MD5Str, file.length() / 1024 / 1024);
+        MoonSeqLogger.info("文件名：{}，MD5：{}，大小为：{}M", file.getAbsolutePath(), MD5Str, file.length() / 1024 / 1024);
 //        System.out.println("文件名：" + file.getAbsolutePath() + "\tMD5" + MD5Str + "\t大小为" + file.length()/1024/1024 + "M");
         return MD5Str;
     }
@@ -94,7 +94,7 @@ public class FileUtil {
         //跳过不同的文件格式
         if (!oldFilePath.getName().substring(oldFilePath.getName().lastIndexOf(".") + 1).equals(oldFilePath.getName().substring(oldFilePath.getName().lastIndexOf(".") + 1))) {
 //            System.out.println("文件格式不同，跳过\t" + oldFilePath.getAbsolutePath() + "\t" + oldFilePath.getAbsolutePath());
-            MachSeqLogger.info("文件格式不同，跳过\t 旧文件为：{}，新文件为：{}", oldFilePath.getAbsolutePath(), newFilePath.getAbsolutePath());
+            MoonSeqLogger.info("文件格式不同，跳过\t 旧文件为：{}，新文件为：{}", oldFilePath.getAbsolutePath(), newFilePath.getAbsolutePath());
             return false;
         }
 

@@ -1,7 +1,7 @@
 package zhan.wang.moon.datetime;
 
 import zhan.wang.moon.constant.DateFormat;
-import zhan.wang.moon.log.MachSeqLogger;
+import zhan.wang.moon.log.MoonSeqLogger;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -36,7 +36,7 @@ public class DateFormatHelper {
         try {
             return df.format(date);
         } catch (Exception e) {
-            MachSeqLogger.warn("格式化日期时间[{}]出错", date, e);
+            MoonSeqLogger.warn("格式化日期时间[{}]出错", date, e);
             return null;
         }
     }
@@ -52,7 +52,7 @@ public class DateFormatHelper {
         try {
             return df.format(timestamp);
         } catch (Exception e) {
-            MachSeqLogger.warn("格式化时间戳时间[{}]出错", timestamp, e);
+            MoonSeqLogger.warn("格式化时间戳时间[{}]出错", timestamp, e);
             return null;
         }
     }
@@ -69,7 +69,7 @@ public class DateFormatHelper {
         try {
             return df.parse(dateStr);
         } catch (Exception e) {
-            MachSeqLogger.warn("日期[{}]格式转换出错", dateStr, e);
+            MoonSeqLogger.warn("日期[{}]格式转换出错", dateStr, e);
             return null;
         }
     }
@@ -85,7 +85,7 @@ public class DateFormatHelper {
         try {
             return df.parse(df.format(date));
         } catch (Exception e) {
-            MachSeqLogger.warn("日期[{}]格式转换出错", date, e);
+            MoonSeqLogger.warn("日期[{}]格式转换出错", date, e);
             return null;
         }
     }

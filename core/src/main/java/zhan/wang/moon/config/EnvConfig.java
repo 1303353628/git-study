@@ -38,9 +38,9 @@ public class EnvConfig {
             String ip = InetAddress.getLocalHost().getHostAddress();
             hostip = StringUtils.substring(ip, ip.lastIndexOf('.') + 1);
             if (hostip.length() == 1) {
-                hostip += "00";
+                hostip = "00" + hostip;
             } else if (hostip.length() == 2) {
-                hostip += "0";
+                hostip = "0" + hostip;
             }
         } catch (Exception e) {
             log.warn("获取机器IP地址出错", e);
