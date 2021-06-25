@@ -17,6 +17,7 @@
         <module>core</module>
         <!-- 文件处理 -->
         <module>file</module>
+        <module>fullmoon</module>
     </modules>
 
 
