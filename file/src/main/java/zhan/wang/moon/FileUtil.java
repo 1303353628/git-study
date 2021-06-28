@@ -45,6 +45,32 @@ public class FileUtil {
         file.delete();
     }
 
+    public void delDictionary(String sourcePath) {
+        File sourceFile = new File(sourcePath);
+        if (sourceFile.isDirectory()) {
+            if (sourceFile.listFiles().length == 0) {
+                System.out.println(sourceFile.getAbsoluteFile());
+                sourceFile.delete();
+            }else {
+                delDictionary(sourceFile);
+            }
+        }
+    }
+
+
+    public void delDictionary(File sourceFile) {
+        if (sourceFile.isDirectory()) {
+            if (sourceFile.listFiles().length == 0) {
+                System.out.println(sourceFile.getAbsoluteFile());
+                sourceFile.delete();
+            } else {
+                for (File file:sourceFile.listFiles()) {
+                    delDictionary(file);
+                }
+            }
+        }
+    }
+
 
     /**
      * 对比两个文件是否相同 boolean类型，相同为true
